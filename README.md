@@ -1,7 +1,7 @@
 # killswitch_std
 
-[![Crates.io](https://img.shields.io/crates/v/killswitch_std.svg?style=for-the-badge)](https://crates.io/crates/dlx-rs)
-[![Documentation](https://img.shields.io/docsrs/killswitch_std?style=for-the-badge)](https://docs.rs/dlx-rs/)
+[![Crates.io](https://img.shields.io/crates/v/killswitch_std.svg?style=for-the-badge)](https://crates.io/crates/killswitch_std)
+[![Documentation](https://img.shields.io/docsrs/killswitch_std?style=for-the-badge)](https://docs.rs/killswitch_std/)
 [![License](https://img.shields.io/github/license/tveness/killswitch_std?style=for-the-badge)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
 
