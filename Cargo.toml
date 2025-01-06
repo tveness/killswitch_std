@@ -2,6 +2,8 @@
 name = "killswitch_std"
 version = "0.2.0"
 edition = "2021"
+license = "AGPL-3.0-only"
+description = "A thread-safe kill switch using only the standard library"
 
 [dependencies]
 
