@@ -60,6 +60,9 @@ pub struct KillSwitch {
     switch: Arc<AtomicBool>,
 }
 
+/// Derived from a [`KillSwitch`], allows to check if the kill switch is still alive, but cannot
+/// activate it. This may be useful in separating out a thread which is only watching the value of
+/// the kill switch.
 #[derive(Clone)]
 pub struct KillSwitchWatcher {
     switch: Arc<AtomicBool>,
