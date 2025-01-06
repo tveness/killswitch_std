@@ -1,3 +1,5 @@
+#![deny(missing_docs)]
+
 //! A simple implementation of a kill switch, using only the standard library
 //!
 //! # Example
