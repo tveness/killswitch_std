@@ -8,3 +8,6 @@ edition = "2021"
 [dev-dependencies]
 tokio = { version = "1.42.0", features = ["macros", "time"] }
 tokio-test = "0.4.4"
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
