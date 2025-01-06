@@ -52,7 +52,7 @@ use std::{
     },
 };
 
-/// Convenience type which wraps a [`OnceCell`].
+/// Convenience type which wraps a [`AtomicBool`].
 /// Initially, `is_alive()` will return `true`. The value can be cloned across threads, and once it
 /// has been `kill()`ed, then all of the clones will return `false` from `is_alive()`.
 #[derive(Clone)]
