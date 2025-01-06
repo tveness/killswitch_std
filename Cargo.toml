@@ -1,9 +1,11 @@
 [package]
 name = "killswitch_std"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 license = "AGPL-3.0-only"
 description = "A thread-safe kill switch using only the standard library"
+repository = "https://github.com/tveness/killswitch_std"
+readme = "README.md"
 
 [dev-dependencies]
 tokio = { version = "1.42.0", features = ["macros", "time"] }
