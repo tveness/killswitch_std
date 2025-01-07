@@ -2,6 +2,8 @@
 
 [![Crates.io](https://img.shields.io/crates/v/killswitch_std.svg?style=for-the-badge)](https://crates.io/crates/killswitch_std)
 [![Documentation](https://img.shields.io/docsrs/killswitch_std?style=for-the-badge)](https://docs.rs/killswitch_std/)
+[![Build status](https://img.shields.io/github/actions/workflow/status/tveness/killswitch_std/rust.yml?label=Tests&style=for-the-badge
+)](https://github.com/tveness/killswitch_std/actions/workflows/rust.yml)
 [![License](https://img.shields.io/github/license/tveness/killswitch_std?style=for-the-badge)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
 
