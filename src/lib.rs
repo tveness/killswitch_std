@@ -85,8 +85,14 @@ impl KillSwitch {
     }
 
     /// Flip the kill switch (will cause `is_alive()` to return `false`
-    pub fn kill(&self) {
-        self.switch.store(false, Relaxed)
+    pub fn kill(&self) -> Result<(), KillSwitchErr> {
+        match self.is_alive() {
+            true => {
+                self.switch.store(false, Relaxed);
+                Ok(())
+            }
+            false => Err(KillSwitchErr::AlreadyKilled),
+        }
     }
 
     /// Produce a kill switch which can only watch the value, but cannot flip the switch
@@ -128,5 +134,26 @@ impl Display for KillSwitch {
                 false => "killed",
             }
         )
+    }
+}
+
+/// General error type for a [`KillSwitch`]
+#[derive(Debug, Clone)]
+pub enum KillSwitchErr {
+    /// Kill switch has already been flipped
+    AlreadyKilled,
+}
+
+impl std::error::Error for KillSwitchErr {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        None
+    }
+}
+
+impl std::fmt::Display for KillSwitchErr {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            KillSwitchErr::AlreadyKilled => write!(f, "kill switch already killed"),
+        }
     }
 }
