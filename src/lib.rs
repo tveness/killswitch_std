@@ -57,7 +57,7 @@ use std::{
 /// Convenience type which wraps a [`AtomicBool`].
 /// Initially, `is_alive()` will return `true`. The value can be cloned across threads, and once it
 /// has been `kill()`ed, then all of the clones will return `false` from `is_alive()`.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct KillSwitch {
     switch: Arc<AtomicBool>,
 }
@@ -65,7 +65,7 @@ pub struct KillSwitch {
 /// Derived from a [`KillSwitch`], allows to check if the kill switch is still alive, but cannot
 /// activate it. This may be useful in separating out a thread which is only watching the value of
 /// the kill switch.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct KillSwitchWatcher {
     switch: Arc<AtomicBool>,
 }
