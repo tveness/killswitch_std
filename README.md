@@ -13,7 +13,7 @@ standard library for creating a thread-safe kill switch
 
 # Example
 
-```rust
+```rust, no_compile
 #[tokio::main]
 async fn main() {
     use killswitch_std::KillSwitch;
@@ -58,7 +58,7 @@ async fn main() {
  ```
  
 Should produce output of the following form:
-```
+```text
 Is kill switch set? alive
 Kill switch on thread 2: alive
 Kill switch on thread 1: alive

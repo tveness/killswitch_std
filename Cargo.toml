@@ -8,7 +8,7 @@ repository = "https://github.com/tveness/killswitch_std"
 readme = "README.md"
 
 [dev-dependencies]
-tokio = { version = "1.42.0", features = ["macros", "time"] }
+tokio = { version = "1.42.0", features = ["macros", "time", "rt-multi-thread"] }
 tokio-test = "0.4.4"
 
 [package.metadata.docs.rs]
